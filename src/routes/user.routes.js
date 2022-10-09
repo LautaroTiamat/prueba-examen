@@ -2,14 +2,14 @@ const router = require('express').Router();
 const validarJWT = require('../middlewares/validarJWT');
 const { getUser, postUser } = require('./../controllers/user.controller');
 
-// GET
+/* ----------- GET ----------- */
+
+// Conseguir datos del usuario loggeado
 router.get('/user', [validarJWT], getUser);
 
-// POST
+/* ----------- POST ----------- */
+
+// Agregar un usuario
 router.post('/user', [], postUser);
-
-// PUT
-
-// DELETE
 
 module.exports = router;
